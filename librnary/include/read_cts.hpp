@@ -20,8 +20,19 @@ struct CTData {
 	Matching match;
 };
 
-/// Reads a single file give a path to the CT file.
-CTData ReadFile(const std::string &file, const std::string &path);
+
+/**
+ * Reads a single CT file.
+ * @param full_path The complete path to the file.
+ */
+CTData ReadCTFile(const std::string &full_path);
+
+/**
+ * Reads a single CT file.
+ * @param directory Path to CT directory.
+ * @param file CT file name.
+ */
+CTData ReadCTFile(const std::string &directory, const std::string &file);
 
 /**
  * Takes the base path to a ct folder, and an input stream.
